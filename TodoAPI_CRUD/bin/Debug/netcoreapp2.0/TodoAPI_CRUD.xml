@@ -1,0 +1,453 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>TodoAPI_CRUD</name>
+    </assembly>
+    <members>
+        <member name="T:TodoAPI_CRUD.Controllers.ValuesController">
+            <summary>
+            Manage the User in the database
+            </summary>
+        </member>
+        <member name="M:TodoAPI_CRUD.Controllers.ValuesController.Get">
+            <summary>
+            Retrieve the list of user in the database
+            </summary>
+            <returns>The list of People</returns>
+        </member>
+        <member name="M:TodoAPI_CRUD.Controllers.ValuesController.Get(System.Int32)">
+            <summary>
+            Retrieve the user with the id given in parameter
+            </summary>
+            <param name="id">The id of the user to return</param>
+            <returns>The Peopuserle with the id to retrieve</returns>
+            <response code="200">If the users with the specified Id exist</response>
+            <response code="404">If the users with the specified Id doesn't exist</response>
+        </member>
+        <member name="M:TodoAPI_CRUD.Controllers.ValuesController.CreateUserFichier(FichierCentral)">
+            <summary>
+            Create a user in the database
+            </summary>
+            <param name="UserModel">The user to create</param>
+            <returns>Ok if the user has been created</returns>
+        </member>
+        <member name="M:TodoAPI_CRUD.Controllers.ValuesController.CreateAbonnementUser(FichierCentral,System.Int64)">
+            <summary>
+            Create an Abonnement for user in the database
+            </summary>
+            <param name="UserModel">The Abonnement user to create</param>
+            <returns>Ok if the user Abonnement has been created</returns>
+        </member>
+        <member name="M:TodoAPI_CRUD.Controllers.ValuesController.UpdateUser(System.Int64,FichierCentral)">
+            <summary>
+            Update the user specified by the id in given in parameter
+            </summary>
+            <param name="id">The id of the user to update</param>
+            <param name="value">The value of the user to update</param>
+        </member>
+        <member name="M:TodoAPI_CRUD.Controllers.ValuesController.DeleteUser(System.Int64)">
+            <summary>
+            Delete a user from his id
+            </summary>
+            <param name="id">The id of the user to delete</param>
+            <returns>Ok if the user has been successfully deleted</returns>
+            <response code="200">If the user was successfully deleted</response>
+            <response code="404">If the user to delete hasn't been found</response>
+        </member>
+        <member name="T:TodoAPI_CRUD.Controllers.ArticlesController">
+            <summary>
+            Manage the Article in the database
+            </summary>
+        </member>
+        <member name="M:TodoAPI_CRUD.Controllers.ArticlesController.Get">
+            <summary>
+            Retrieve all the Articles in the database
+            </summary>
+            <returns>The list of Articles</returns>
+        </member>
+        <member name="M:TodoAPI_CRUD.Controllers.ArticlesController.SearchMovie(System.String)">
+            <summary>
+            Search a Movie by his title
+            </summary>
+            <param name="q">The text to search in title</param>
+            <returns>The list of articles corresponding to this article</returns>
+        </member>
+        <member name="M:TodoAPI_CRUD.Controllers.ArticlesController.Post(Articles)">
+            <summary>
+            Create a Movie in the database
+            </summary>
+            <param name="article">The Movie to create</param>
+            <returns>Ok if the Movie is created</returns>
+            <response code="200">If the Movie was successfully created</response>
+            <response code="400">If the Movie hasn't been created</response>
+        </member>
+        <member name="M:TodoAPI_CRUD.Controllers.ArticlesController.Put(System.Int32,Articles)">
+            <summary>
+            Update the Articles specified by the id in given in parameter
+            </summary>
+            <param name="id">The id of the Articles to update</param>
+            <param name="value">The value of the Articles to update</param>
+        </member>
+        <member name="M:TodoAPI_CRUD.Controllers.ArticlesController.Delete(System.Int32)">
+            <summary>
+            Delete a Articles from his id
+            </summary>
+            <param name="id">The id of the Articles to delete</param>
+            <returns>Ok if the Articles has been successfully deleted</returns>
+            <response code="200">If the Articles was successfully deleted</response>
+            <response code="404">If the Articles to delete hasn't been found</response>
+        </member>
+        <member name="T:TodoAPI_CRUD.Controllers.AuthenticationUserController">
+            <summary>
+            Manage User's authentication
+            </summary>
+        </member>
+        <member name="M:TodoAPI_CRUD.Controllers.AuthenticationUserController.Login(FichierCentral)">
+            <summary>
+            Log in a User
+            </summary>
+            <param name="user"></param>
+            <returns>Status OK if User is Logged In</returns>
+            <response code="200">If the User is LoggedIn</response>
+            <response code="400">If the User is null</response>
+            <response code="404">If the User doesn't exist</response> 
+        </member>
+        <member name="M:TodoAPI_CRUD.Controllers.AuthenticationUserController.Logout">
+            <summary>
+            Log out a User
+            </summary>
+            <returns>Status Ok when User is logged Out</returns>
+        </member>
+        <member name="M:TodoAPI_CRUD.Controllers.NoteEtCommentairesController.Post(IDV_NET5.Models.NotesEtCommentaires)">
+            <summary>
+            Create a comment for a Article
+            </summary>
+            <param name="comment">The Article to add</param>
+            <returns>Ok if the comment has been successfully created</returns>
+            <response code="200">If the comment has been created</response>
+            <response code="400">If the comment couldn't be created</response>
+        </member>
+        <member name="M:TodoAPI_CRUD.Controllers.NoteEtCommentairesController.Put(System.Int32,IDV_NET5.Models.NotesEtCommentaires)">
+            <summary>
+            Update a Comment in a Movie
+            </summary>
+            <param name="id">The id of the comment to update</param>
+            <param name="comment">The comment to update</param>
+            <returns>Ok if the comment has been updated</returns>
+            <response code="200">If the Comment has been updated</response>
+            <response code="400">If the Comment couldn't be created</response>
+            <response code="403">If the current User is not the owner of the Comment</response>
+            <response code="404">If the Comment doesn't exist</response>
+        </member>
+        <member name="M:TodoAPI_CRUD.Controllers.NoteEtCommentairesController.Delete(System.Int32)">
+            <summary>
+            Delete the Comment by the given id
+            </summary>
+            <param name="id">The id of the Comment to delete</param>
+            <returns>Ok if the Comment has been successfully deleted</returns>
+            <response code="200">If the Comment has been deleted</response>
+            <response code="403">If the current User is not the owner of the Comment</response>
+            <response code="404">If the Comment doesn't exist</response>
+        </member>
+        <member name="P:TodoAPI_CRUD.Models.CategoriesMedia.CategoriesMediaID">
+            <summary>
+            The id  CategoriesMedia
+            </summary>
+        </member>
+        <member name="P:TodoAPI_CRUD.Models.CategoriesMedia.TypeCategorieMedia">
+            <summary>
+            The Type Categorie Medias of CategoriesMedia
+            </summary>
+        </member>
+        <member name="P:TodoAPI_CRUD.Models.CategoriesMedia.ListVideo">
+            <summary>
+            The List Video of  CategoriesMedia
+            </summary>
+        </member>
+        <member name="P:TodoAPI_CRUD.Models.CategoriesMedia.ListImage">
+            <summary>
+            The List Image of CategoriesMedia
+            </summary>
+        </member>
+        <member name="P:TodoAPI_CRUD.Models.Images.ImagesID">
+            <summary>
+            The Id of the Image
+            </summary>
+        </member>
+        <member name="P:TodoAPI_CRUD.Models.Images.NomImage">
+            <summary>
+            The name  of the Image
+            </summary>
+        </member>
+        <member name="P:TodoAPI_CRUD.Models.Images.URLImage">
+            <summary>
+            The URL chemin  of the Image
+            </summary>
+        </member>
+        <member name="P:TodoAPI_CRUD.Models.Images.CategorieID">
+            <summary>
+            The Id categorie of the Image
+            </summary>
+        </member>
+        <member name="P:TodoAPI_CRUD.Models.Images.ArticleID">
+            <summary>
+            The Id article of the Image
+            </summary>
+        </member>
+        <member name="P:TodoAPI_CRUD.Models.Images.CategoriesMedia">
+            <summary>
+            The categorie media of the Image
+            </summary>
+        </member>
+        <member name="P:TodoAPI_CRUD.Models.Images.Articles">
+            <summary>
+            The article of the Image
+            </summary>
+        </member>
+        <member name="P:TodoAPI_CRUD.Models.Profils.ProfilsID">
+            <summary>
+            The Id profil of the Profil
+            </summary>
+        </member>
+        <member name="P:TodoAPI_CRUD.Models.Profils.CodeProfil">
+            <summary>
+            The code  of the Profil
+            </summary>
+        </member>
+        <member name="P:TodoAPI_CRUD.Models.Profils.ProfilName">
+            <summary>
+            The name of the Profil
+            </summary>
+        </member>
+        <member name="P:TodoAPI_CRUD.Models.Videos.VideosID">
+            <summary>
+            The Id of the Video
+            </summary>
+        </member>
+        <member name="P:TodoAPI_CRUD.Models.Videos.URLVideo">
+            <summary>
+            The URL chemin  of the Video
+            </summary>
+        </member>
+        <member name="P:TodoAPI_CRUD.Models.Videos.CategoriesMediaID">
+            <summary>
+            The id categorie media of the Video
+            </summary>
+        </member>
+        <member name="P:TodoAPI_CRUD.Models.Videos.ArticlesID">
+            <summary>
+            The Id article of the Video
+            </summary>
+        </member>
+        <member name="P:TodoAPI_CRUD.Models.Videos.CategoriesMedia">
+            <summary>
+            The categorie of the Video
+            </summary>
+        </member>
+        <member name="P:TodoAPI_CRUD.Models.Videos.Articles">
+            <summary>
+            The article of the Video
+            </summary>
+        </member>
+        <member name="P:Abonnements.Abonnement">
+            <summary>
+            The Abonnement Name 
+            </summary>
+        </member>
+        <member name="P:Abonnements.DateDebut">
+            <summary>
+            The Date when the Abonnement was start
+            </summary>
+        </member>
+        <member name="P:Abonnements.DateFin">
+            <summary>
+            The Date when the Abonnement was end
+            </summary>
+        </member>
+        <member name="P:Abonnements.Prix_Abonnement">
+            <summary>
+            The price of the Abonnement
+            </summary>
+        </member>
+        <member name="P:Abonnements.pkAbonne">
+            <summary>
+            The id user to the Abonnement
+            </summary>
+        </member>
+        <member name="P:Abonnements.FichierCentral">
+            <summary>
+            The user have this abonnement
+            </summary>
+        </member>
+        <member name="P:Articles.ArticlesID">
+            <summary>
+            The Id  of the Article
+            </summary>
+        </member>
+        <member name="P:Articles.FichierCentralID">
+            <summary>
+            The Id user of the Article
+            </summary>
+        </member>
+        <member name="P:Articles.TitreArticle">
+            <summary>
+            The title  of the Article
+            </summary>
+        </member>
+        <member name="P:Articles.PhraseAcroche">
+            <summary>
+            The sentence of the Article
+            </summary>
+        </member>
+        <member name="P:Articles.TextArticle">
+            <summary>
+            The content  of the Article
+            </summary>
+        </member>
+        <member name="P:Articles.DateCreation">
+            <summary>
+            The date create of the Article
+            </summary>
+        </member>
+        <member name="P:Articles.LoginCreation">
+            <summary>
+            The login user of the Article
+            </summary>
+        </member>
+        <member name="P:Articles.DateModification">
+            <summary>
+            The date update of the Article
+            </summary>
+        </member>
+        <member name="P:Articles.LoginModification">
+            <summary>
+            The login update of the Article
+            </summary>
+        </member>
+        <member name="P:Articles.DateDelete">
+            <summary>
+            The date delete of the Article
+            </summary>
+        </member>
+        <member name="P:Articles.LoginDelete">
+            <summary>
+            The login user delete of the Article
+            </summary>
+        </member>
+        <member name="P:Articles.FichierCentral">
+            <summary>
+            The user of the Article
+            </summary>
+        </member>
+        <member name="P:Articles.CategoriesMedia">
+            <summary>
+            The categorie media of the Article
+            </summary>
+        </member>
+        <member name="P:Articles.Abonnements">
+            <summary>
+            The abonnement user  of the Article
+            </summary>
+        </member>
+        <member name="P:IDV_NET5.Models.NotesEtCommentaires.NotesEtCommentairesID">
+            <summary>
+            The id of the NotesEtCommentaire
+            </summary>
+        </member>
+        <member name="P:IDV_NET5.Models.NotesEtCommentaires.Commentaire">
+            <summary>
+            The Commentaire of the NotesEtCommentaire
+            </summary>
+        </member>
+        <member name="P:IDV_NET5.Models.NotesEtCommentaires.Note">
+            <summary>
+            The note of the NotesEtCommentaire
+            </summary>
+        </member>
+        <member name="P:IDV_NET5.Models.NotesEtCommentaires.DateCreation">
+            <summary>
+            The Date creation of the NotesEtCommentaire
+            </summary>
+        </member>
+        <member name="P:IDV_NET5.Models.NotesEtCommentaires.FichierCentralID">
+            <summary>
+            The id user of the NotesEtCommentaire
+            </summary>
+        </member>
+        <member name="P:IDV_NET5.Models.NotesEtCommentaires.ArticleID">
+            <summary>
+            The id article of the NotesEtCommentaire
+            </summary>
+        </member>
+        <member name="P:IDV_NET5.Models.NotesEtCommentaires.FichierCentral">
+            <summary>
+            The user of the NotesEtCommentaire
+            </summary>
+        </member>
+        <member name="P:IDV_NET5.Models.NotesEtCommentaires.Articles">
+            <summary>
+            The Article of the NotesEtCommentaire
+            </summary>
+        </member>
+        <member name="P:FichierCentral.FichierCentralID">
+            <summary>
+            The ID user 
+            </summary>
+        </member>
+        <member name="P:FichierCentral.UserId">
+            <summary>
+            The Identifian unquie user 
+            </summary>
+        </member>
+        <member name="P:FichierCentral.Nom">
+            <summary>
+            The Name user 
+            </summary>
+        </member>
+        <member name="P:FichierCentral.Prenom">
+            <summary>
+            The Firstname user 
+            </summary>
+        </member>
+        <member name="P:FichierCentral.Login">
+            <summary>
+            The Login  user 
+            </summary>
+        </member>
+        <member name="P:FichierCentral.Password">
+            <summary>
+            The password  user 
+            </summary>
+        </member>
+        <member name="P:FichierCentral.Email">
+            <summary>
+            The Email user 
+            </summary>
+        </member>
+        <member name="P:FichierCentral.DateCreation">
+            <summary>
+            The DateCreation of this  user 
+            </summary>
+        </member>
+        <member name="P:FichierCentral.ProfilsID">
+            <summary>
+            The id profil for this user 
+            </summary>
+        </member>
+        <member name="P:FichierCentral.profils">
+            <summary>
+            The profil of the user
+            </summary>
+        </member>
+        <member name="P:FichierCentral.AbonnementsID">
+            <summary>
+            The Id Abonnement for user
+            </summary>
+        </member>
+        <member name="P:FichierCentral.Abonnements">
+            <summary>
+            The Abonnements for user
+            </summary>
+        </member>
+    </members>
+</doc>
