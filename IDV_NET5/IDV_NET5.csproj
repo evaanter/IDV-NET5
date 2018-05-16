@@ -1,0 +1,126 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Content Remove="wwwroot\Content\assets\css\font-awesome.min.css" />
+    <Content Remove="wwwroot\Content\assets\css\main.css" />
+    <Content Remove="wwwroot\Content\assets\fonts\fontawesome-webfont.eot" />
+    <Content Remove="wwwroot\Content\assets\fonts\fontawesome-webfont.svg" />
+    <Content Remove="wwwroot\Content\assets\fonts\fontawesome-webfont.ttf" />
+    <Content Remove="wwwroot\Content\assets\fonts\fontawesome-webfont.woff" />
+    <Content Remove="wwwroot\Content\assets\fonts\fontawesome-webfont.woff2" />
+    <Content Remove="wwwroot\Content\assets\fonts\FontAwesome.otf" />
+    <Content Remove="wwwroot\Content\assets\js\jquery.min.js" />
+    <Content Remove="wwwroot\Content\assets\js\jquery.scrollex.min.js" />
+    <Content Remove="wwwroot\Content\assets\js\main.js" />
+    <Content Remove="wwwroot\Content\assets\js\skel.min.js" />
+    <Content Remove="wwwroot\Content\assets\js\util.js" />
+    <Content Remove="wwwroot\Content\CREDITS.txt" />
+    <Content Remove="wwwroot\Content\elements.html" />
+    <Content Remove="wwwroot\Content\generic.html" />
+    <Content Remove="wwwroot\Content\images\bg.jpg" />
+    <Content Remove="wwwroot\Content\images\pic01.jpg" />
+    <Content Remove="wwwroot\Content\images\pic02.jpg" />
+    <Content Remove="wwwroot\Content\images\pic03.jpg" />
+    <Content Remove="wwwroot\Content\images\pic04.jpg" />
+    <Content Remove="wwwroot\Content\images\slide01.jpg" />
+    <Content Remove="wwwroot\Content\images\slide02.jpg" />
+    <Content Remove="wwwroot\Content\images\slide03.jpg" />
+    <Content Remove="wwwroot\Content\images\slide04.jpg" />
+    <Content Remove="wwwroot\Content\images\slide05.jpg" />
+    <Content Remove="wwwroot\Content\index.html" />
+    <Content Remove="wwwroot\Content\LICENSE.txt" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="EntityFramework" Version="6.2.0" />
+    <PackageReference Include="EntityFramework.SqlServerCompact" Version="6.2.0" />
+    <PackageReference Include="Generator" Version="1.0.9" />
+    <PackageReference Include="Microsoft.AspNet.Identity.EntityFramework" Version="2.2.1" />
+    <PackageReference Include="Microsoft.AspNetCore.All" Version="2.0.7" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="2.0.2" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="2.0.2" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="2.0.2" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration" Version="2.0.3" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.0.3" />
+    <PackageReference Include="Poco.Evolved.SQL" Version="1.1.0" />
+    <PackageReference Include="T4" Version="2.0.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <DotNetCliToolReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Tools" Version="2.0.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="wwwroot\Content\assets\css\font-awesome.min.css" />
+    <None Include="wwwroot\Content\assets\css\main.css" />
+    <None Include="wwwroot\Content\assets\fonts\fontawesome-webfont.eot" />
+    <None Include="wwwroot\Content\assets\fonts\fontawesome-webfont.svg" />
+    <None Include="wwwroot\Content\assets\fonts\fontawesome-webfont.ttf" />
+    <None Include="wwwroot\Content\assets\fonts\fontawesome-webfont.woff" />
+    <None Include="wwwroot\Content\assets\fonts\fontawesome-webfont.woff2" />
+    <None Include="wwwroot\Content\assets\fonts\FontAwesome.otf" />
+    <None Include="wwwroot\Content\assets\js\jquery.min.js" />
+    <None Include="wwwroot\Content\assets\js\jquery.scrollex.min.js" />
+    <None Include="wwwroot\Content\assets\js\main.js" />
+    <None Include="wwwroot\Content\assets\js\skel.min.js" />
+    <None Include="wwwroot\Content\assets\js\util.js" />
+    <None Include="wwwroot\Content\CREDITS.txt" />
+    <None Include="wwwroot\Content\elements.html" />
+    <None Include="wwwroot\Content\generic.html" />
+    <None Include="wwwroot\Content\images\bg.jpg" />
+    <None Include="wwwroot\Content\images\pic01.jpg" />
+    <None Include="wwwroot\Content\images\pic02.jpg" />
+    <None Include="wwwroot\Content\images\pic03.jpg" />
+    <None Include="wwwroot\Content\images\pic04.jpg" />
+    <None Include="wwwroot\Content\images\slide01.jpg" />
+    <None Include="wwwroot\Content\images\slide02.jpg" />
+    <None Include="wwwroot\Content\images\slide03.jpg" />
+    <None Include="wwwroot\Content\images\slide04.jpg" />
+    <None Include="wwwroot\Content\images\slide05.jpg" />
+    <None Include="wwwroot\Content\index.html" />
+    <None Include="wwwroot\Content\LICENSE.txt" />
+    <None Include="wwwroot\Content\assets\js\JavaScript.js" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="EntityFramework">
+      <HintPath>EntityFramework</HintPath>
+    </Reference>
+    <Reference Include="System">
+      <HintPath>System</HintPath>
+    </Reference>
+    <Reference Include="System.ComponentModel.Composition">
+      <HintPath>System.ComponentModel.Composition</HintPath>
+    </Reference>
+    <Reference Include="System.ComponentModel.DataAnnotations">
+      <HintPath>System.ComponentModel.DataAnnotations</HintPath>
+    </Reference>
+    <Reference Include="System.Data">
+      <HintPath>System.Data</HintPath>
+    </Reference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Service Include="{508349b6-6b84-4df5-91f0-309beebad82d}" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Models\Database.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Database.tt</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="Models\Database.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>Database.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+
+</Project>

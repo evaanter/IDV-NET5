@@ -1,0 +1,11 @@
+C:\Users\Eva\source\repos\IDV_NET5\IDV_NET5\bin\Debug\netcoreapp2.0\IDV_NET5.deps.json
+C:\Users\Eva\source\repos\IDV_NET5\IDV_NET5\bin\Debug\netcoreapp2.0\IDV_NET5.runtimeconfig.json
+C:\Users\Eva\source\repos\IDV_NET5\IDV_NET5\bin\Debug\netcoreapp2.0\IDV_NET5.runtimeconfig.dev.json
+C:\Users\Eva\source\repos\IDV_NET5\IDV_NET5\bin\Debug\netcoreapp2.0\IDV_NET5.dll
+C:\Users\Eva\source\repos\IDV_NET5\IDV_NET5\obj\Debug\netcoreapp2.0\IDV_NET5.csproj.CoreCompileInputs.cache
+C:\Users\Eva\source\repos\IDV_NET5\IDV_NET5\obj\Debug\netcoreapp2.0\IDV_NET5.AssemblyInfoInputs.cache
+C:\Users\Eva\source\repos\IDV_NET5\IDV_NET5\obj\Debug\netcoreapp2.0\IDV_NET5.AssemblyInfo.cs
+C:\Users\Eva\source\repos\IDV_NET5\IDV_NET5\bin\Debug\netcoreapp2.0\IDV_NET5.pdb
+C:\Users\Eva\source\repos\IDV_NET5\IDV_NET5\obj\Debug\netcoreapp2.0\IDV_NET5.dll
+C:\Users\Eva\source\repos\IDV_NET5\IDV_NET5\obj\Debug\netcoreapp2.0\IDV_NET5.pdb
+C:\Users\Eva\source\repos\IDV_NET5\IDV_NET5\obj\Debug\netcoreapp2.0\IDV_NET5.csprojResolveAssemblyReference.cache

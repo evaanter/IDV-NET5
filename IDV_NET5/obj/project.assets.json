@@ -13,6 +13,40 @@
           "lib/net45/EntityFramework.dll": {}
         }
       },
+      "EntityFramework.SqlServerCompact/6.2.0": {
+        "type": "package",
+        "compile": {
+          "lib/net45/EntityFramework.SqlServerCompact.dll": {}
+        },
+        "runtime": {
+          "lib/net45/EntityFramework.SqlServerCompact.dll": {}
+        }
+      },
+      "Generator/1.0.9": {
+        "type": "package",
+        "dependencies": {
+          "HtmlAgilityPack": "1.4.6",
+          "ILMerge.MSBuild.Tasks": "1.0.0.3"
+        },
+        "compile": {
+          "lib/net40/Generator.exe": {}
+        },
+        "runtime": {
+          "lib/net40/Generator.exe": {}
+        }
+      },
+      "HtmlAgilityPack/1.4.6": {
+        "type": "package",
+        "compile": {
+          "lib/Net45/HtmlAgilityPack.dll": {}
+        },
+        "runtime": {
+          "lib/Net45/HtmlAgilityPack.dll": {}
+        }
+      },
+      "ILMerge.MSBuild.Tasks/1.0.0.3": {
+        "type": "package"
+      },
       "Libuv/1.10.0": {
         "type": "package",
         "dependencies": {
@@ -124,31 +158,6 @@
         },
         "runtime": {
           "lib/net45/Microsoft.AspNet.Identity.EntityFramework.dll": {}
-        }
-      },
-      "Microsoft.AspNet.WebApi.Client/5.2.5": {
-        "type": "package",
-        "dependencies": {
-          "Newtonsoft.Json": "10.0.1",
-          "Newtonsoft.Json.Bson": "1.0.1"
-        },
-        "compile": {
-          "lib/netstandard2.0/System.Net.Http.Formatting.dll": {}
-        },
-        "runtime": {
-          "lib/netstandard2.0/System.Net.Http.Formatting.dll": {}
-        }
-      },
-      "Microsoft.AspNet.WebApi.Core/5.2.5": {
-        "type": "package",
-        "dependencies": {
-          "Microsoft.AspNet.WebApi.Client": "5.2.5"
-        },
-        "compile": {
-          "lib/net45/System.Web.Http.dll": {}
-        },
-        "runtime": {
-          "lib/net45/System.Web.Http.dll": {}
         }
       },
       "Microsoft.AspNetCore/2.0.2": {
@@ -2940,6 +2949,27 @@
           "lib/netstandard1.3/NuGet.Frameworks.dll": {}
         }
       },
+      "Poco.Evolved.Core/1.1.0": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/Poco.Evolved.Core.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Poco.Evolved.Core.dll": {}
+        }
+      },
+      "Poco.Evolved.SQL/1.1.0": {
+        "type": "package",
+        "dependencies": {
+          "Poco.Evolved.Core": "1.1.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/Poco.Evolved.SQL.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Poco.Evolved.SQL.dll": {}
+        }
+      },
       "Remotion.Linq/2.1.1": {
         "type": "package",
         "dependencies": {
@@ -3309,68 +3339,6 @@
         },
         "runtime": {
           "lib/netstandard1.5/StackExchange.Redis.StrongName.dll": {}
-        }
-      },
-      "Swashbuckle.AspNetCore/2.4.0": {
-        "type": "package",
-        "dependencies": {
-          "NETStandard.Library": "1.6.1",
-          "Swashbuckle.AspNetCore.Swagger": "2.4.0",
-          "Swashbuckle.AspNetCore.SwaggerGen": "2.4.0",
-          "Swashbuckle.AspNetCore.SwaggerUI": "2.4.0"
-        },
-        "compile": {
-          "lib/netstandard1.6/Swashbuckle.AspNetCore.dll": {}
-        },
-        "runtime": {
-          "lib/netstandard1.6/Swashbuckle.AspNetCore.dll": {}
-        }
-      },
-      "Swashbuckle.AspNetCore.Swagger/2.4.0": {
-        "type": "package",
-        "dependencies": {
-          "Microsoft.AspNetCore.Mvc.Core": "1.0.4",
-          "Microsoft.AspNetCore.Mvc.Formatters.Json": "1.0.4",
-          "NETStandard.Library": "1.6.1"
-        },
-        "compile": {
-          "lib/netstandard1.6/Swashbuckle.AspNetCore.Swagger.dll": {}
-        },
-        "runtime": {
-          "lib/netstandard1.6/Swashbuckle.AspNetCore.Swagger.dll": {}
-        }
-      },
-      "Swashbuckle.AspNetCore.SwaggerGen/2.4.0": {
-        "type": "package",
-        "dependencies": {
-          "Microsoft.AspNetCore.Mvc.ApiExplorer": "1.0.4",
-          "Microsoft.AspNetCore.Mvc.Core": "1.0.4",
-          "Microsoft.AspNetCore.Mvc.DataAnnotations": "1.0.4",
-          "NETStandard.Library": "1.6.1",
-          "Swashbuckle.AspNetCore.Swagger": "2.4.0",
-          "System.Xml.XPath": "4.0.1"
-        },
-        "compile": {
-          "lib/netstandard1.6/Swashbuckle.AspNetCore.SwaggerGen.dll": {}
-        },
-        "runtime": {
-          "lib/netstandard1.6/Swashbuckle.AspNetCore.SwaggerGen.dll": {}
-        }
-      },
-      "Swashbuckle.AspNetCore.SwaggerUI/2.4.0": {
-        "type": "package",
-        "dependencies": {
-          "Microsoft.AspNetCore.Routing": "1.0.4",
-          "Microsoft.AspNetCore.StaticFiles": "1.0.4",
-          "Microsoft.Extensions.FileProviders.Embedded": "1.0.1",
-          "NETStandard.Library": "1.6.1",
-          "Newtonsoft.Json": "9.0.1"
-        },
-        "compile": {
-          "lib/netstandard1.6/Swashbuckle.AspNetCore.SwaggerUI.dll": {}
-        },
-        "runtime": {
-          "lib/netstandard1.6/Swashbuckle.AspNetCore.SwaggerUI.dll": {}
         }
       },
       "System.AppContext/4.3.0": {
@@ -5108,7 +5076,7 @@
           "System.Xml.ReaderWriter": "4.3.0"
         },
         "compile": {
-          "ref/netstandard1.3/System.Xml.XPath.dll": {}
+          "ref/netstandard1.3/_._": {}
         },
         "runtime": {
           "lib/netstandard1.3/System.Xml.XPath.dll": {}
@@ -5133,6 +5101,9 @@
         "runtime": {
           "lib/netstandard1.3/System.Xml.XPath.XDocument.dll": {}
         }
+      },
+      "T4/2.0.1": {
+        "type": "package"
       },
       "WindowsAzure.Storage/8.1.4": {
         "type": "package",
@@ -5177,6 +5148,84 @@
         "tools/init.ps1",
         "tools/install.ps1",
         "tools/migrate.exe"
+      ]
+    },
+    "EntityFramework.SqlServerCompact/6.2.0": {
+      "sha512": "pGPxxPUCsckMg/UP/EOfklanNCCGIQvJzMBt56UnjwutzlVni7dJL92LFeQR2foI+O2E4NjlCaWWHXxGI7gpQw==",
+      "type": "package",
+      "path": "entityframework.sqlservercompact/6.2.0",
+      "files": [
+        "content/net40/App.config.transform",
+        "content/net40/Web.config.transform",
+        "entityframework.sqlservercompact.6.2.0.nupkg.sha512",
+        "entityframework.sqlservercompact.nuspec",
+        "lib/net40/EntityFramework.SqlServerCompact.dll",
+        "lib/net40/EntityFramework.SqlServerCompact.xml",
+        "lib/net45/EntityFramework.SqlServerCompact.dll",
+        "lib/net45/EntityFramework.SqlServerCompact.xml",
+        "tools/install.ps1"
+      ]
+    },
+    "Generator/1.0.9": {
+      "sha512": "a8xWBzcXXdRk3ytK8GGTHEvkExCi5MIYbwOylTNMd+l48uTxc5Hj1WFlltBHa1GHQLzRfgWHO5AAKQDtPPHaEQ==",
+      "type": "package",
+      "path": "generator/1.0.9",
+      "files": [
+        "generator.1.0.9.nupkg.sha512",
+        "generator.nuspec",
+        "lib/net40/Generator.exe"
+      ]
+    },
+    "HtmlAgilityPack/1.4.6": {
+      "sha512": "eynYngE4cZiNdRAPy1GDXAxBcng0KEJhY9/QPfpZRjEKG45eqinB3r45rMwhnJsVf+1NJcrrnN67mR8ox4I37w==",
+      "type": "package",
+      "path": "htmlagilitypack/1.4.6",
+      "files": [
+        "HAPIcon.png",
+        "htmlagilitypack.1.4.6.nupkg.sha512",
+        "htmlagilitypack.nuspec",
+        "lib/Net20/HtmlAgilityPack.dll",
+        "lib/Net20/HtmlAgilityPack.pdb",
+        "lib/Net20/HtmlAgilityPack.xml",
+        "lib/Net40-client/HtmlAgilityPack.dll",
+        "lib/Net40-client/HtmlAgilityPack.pdb",
+        "lib/Net40-client/HtmlAgilityPack.xml",
+        "lib/Net40/HtmlAgilityPack.XML",
+        "lib/Net40/HtmlAgilityPack.dll",
+        "lib/Net40/HtmlAgilityPack.pdb",
+        "lib/Net45/HtmlAgilityPack.XML",
+        "lib/Net45/HtmlAgilityPack.dll",
+        "lib/Net45/HtmlAgilityPack.pdb",
+        "lib/sl3-wp/HtmlAgilityPack.XML",
+        "lib/sl3-wp/HtmlAgilityPack.dll",
+        "lib/sl3-wp/HtmlAgilityPack.pdb",
+        "lib/sl4-windowsphone71/HtmlAgilityPack.XML",
+        "lib/sl4-windowsphone71/HtmlAgilityPack.dll",
+        "lib/sl4-windowsphone71/HtmlAgilityPack.pdb",
+        "lib/sl4/HtmlAgilityPack.XML",
+        "lib/sl4/HtmlAgilityPack.dll",
+        "lib/sl4/HtmlAgilityPack.pdb",
+        "lib/sl5/HtmlAgilityPack.XML",
+        "lib/sl5/HtmlAgilityPack.dll",
+        "lib/sl5/HtmlAgilityPack.pdb",
+        "lib/winrt45/HtmlAgilityPack.dll",
+        "lib/winrt45/HtmlAgilityPack.pdb",
+        "lib/winrt45/HtmlAgilityPack.pri",
+        "lib/winrt45/HtmlAgilityPack.xml",
+        "readme.txt"
+      ]
+    },
+    "ILMerge.MSBuild.Tasks/1.0.0.3": {
+      "sha512": "z4Q+nOe9FGxCkSqk+FwLqeGA4g/EOnuxghHGrNXFMyWw10y5j54UFYfXYg4s/BT8pnEaMkf0o2Y6EoQB8LuT+w==",
+      "type": "package",
+      "path": "ilmerge.msbuild.tasks/1.0.0.3",
+      "files": [
+        "ilmerge.msbuild.tasks.1.0.0.3.nupkg.sha512",
+        "ilmerge.msbuild.tasks.nuspec",
+        "tools/ILMerge License.rtf",
+        "tools/ILMerge.MSBuild.Tasks.dll",
+        "tools/ILMerge.doc",
+        "tools/ILMerge.exe"
       ]
     },
     "Libuv/1.10.0": {
@@ -5268,35 +5317,6 @@
         "lib/net45/Microsoft.AspNet.Identity.EntityFramework.xml",
         "microsoft.aspnet.identity.entityframework.2.2.1.nupkg.sha512",
         "microsoft.aspnet.identity.entityframework.nuspec"
-      ]
-    },
-    "Microsoft.AspNet.WebApi.Client/5.2.5": {
-      "sha512": "Syxd0gdcEIxOwabl8HFf9mtyALEk471tFcAQbHv5Qvk2okJ4IYqNLBu52jokZM1u0xT4AI7U6ilAtb/y1RFBtQ==",
-      "type": "package",
-      "path": "microsoft.aspnet.webapi.client/5.2.5",
-      "files": [
-        ".signature.p7s",
-        "lib/net45/System.Net.Http.Formatting.dll",
-        "lib/net45/System.Net.Http.Formatting.xml",
-        "lib/netstandard2.0/System.Net.Http.Formatting.dll",
-        "lib/netstandard2.0/System.Net.Http.Formatting.xml",
-        "lib/portable-wp8+netcore45+net45+wp81+wpa81/System.Net.Http.Formatting.dll",
-        "lib/portable-wp8+netcore45+net45+wp81+wpa81/System.Net.Http.Formatting.xml",
-        "microsoft.aspnet.webapi.client.5.2.5.nupkg.sha512",
-        "microsoft.aspnet.webapi.client.nuspec"
-      ]
-    },
-    "Microsoft.AspNet.WebApi.Core/5.2.5": {
-      "sha512": "ZOIyK33X9tJlg2PMpwtizFGNlVmkaKWj6TqxqtnBKtLMbrx9ZjxC5RRw0nEHY2AIoPGhBhdM6mitRCJ3TIhk9g==",
-      "type": "package",
-      "path": "microsoft.aspnet.webapi.core/5.2.5",
-      "files": [
-        ".signature.p7s",
-        "Content/web.config.transform",
-        "lib/net45/System.Web.Http.dll",
-        "lib/net45/System.Web.Http.xml",
-        "microsoft.aspnet.webapi.core.5.2.5.nupkg.sha512",
-        "microsoft.aspnet.webapi.core.nuspec"
       ]
     },
     "Microsoft.AspNetCore/2.0.2": {
@@ -7765,10 +7785,10 @@
       "path": "microsoft.netcore.platforms/2.0.0",
       "files": [
         "LICENSE.TXT",
-        "Microsoft.NETCore.Platforms.2.0.0.nupkg.sha512",
-        "Microsoft.NETCore.Platforms.nuspec",
         "THIRD-PARTY-NOTICES.TXT",
         "lib/netstandard1.0/_._",
+        "microsoft.netcore.platforms.2.0.0.nupkg.sha512",
+        "microsoft.netcore.platforms.nuspec",
         "runtime.json",
         "useSharedDesignerContext.txt",
         "version.txt"
@@ -8215,6 +8235,36 @@
         "nuget.frameworks.nuspec"
       ]
     },
+    "Poco.Evolved.Core/1.1.0": {
+      "sha512": "aa/QSBPi9SscZnzndWd+d65/UxM+9UFJGuZSFFaUcZt/iBSnMR85vzDsAc9Wyuuh99TVQ5Xb20xofVZ0/430Jg==",
+      "type": "package",
+      "path": "poco.evolved.core/1.1.0",
+      "files": [
+        "lib/net45/Poco.Evolved.Core.dll",
+        "lib/net45/Poco.Evolved.Core.xml",
+        "lib/netstandard1.3/Poco.Evolved.Core.dll",
+        "lib/netstandard1.3/Poco.Evolved.Core.xml",
+        "lib/netstandard2.0/Poco.Evolved.Core.dll",
+        "lib/netstandard2.0/Poco.Evolved.Core.xml",
+        "poco.evolved.core.1.1.0.nupkg.sha512",
+        "poco.evolved.core.nuspec"
+      ]
+    },
+    "Poco.Evolved.SQL/1.1.0": {
+      "sha512": "Hf38dlS7dH8JwwRrz0MuooH+l3LPnbckP3vQDDOmjdVMxuzBN4L5tVRxsBwntwZG10zO0OiGt08bmJKbzU2rjA==",
+      "type": "package",
+      "path": "poco.evolved.sql/1.1.0",
+      "files": [
+        "lib/net45/Poco.Evolved.SQL.dll",
+        "lib/net45/Poco.Evolved.SQL.xml",
+        "lib/netstandard1.3/Poco.Evolved.SQL.dll",
+        "lib/netstandard1.3/Poco.Evolved.SQL.xml",
+        "lib/netstandard2.0/Poco.Evolved.SQL.dll",
+        "lib/netstandard2.0/Poco.Evolved.SQL.xml",
+        "poco.evolved.sql.1.1.0.nupkg.sha512",
+        "poco.evolved.sql.nuspec"
+      ]
+    },
     "Remotion.Linq/2.1.1": {
       "sha512": "IJn0BqkvwEDpP+2qjvci7n4/a9f7DhKESLWb2/uG4xQh3rTkGTBUz69bI4IivCoKkTFAqjXxYDZw2K/npohjsw==",
       "type": "package",
@@ -8629,56 +8679,6 @@
         "lib/netstandard1.5/StackExchange.Redis.StrongName.xml",
         "stackexchange.redis.strongname.1.2.4.nupkg.sha512",
         "stackexchange.redis.strongname.nuspec"
-      ]
-    },
-    "Swashbuckle.AspNetCore/2.4.0": {
-      "sha512": "zsFkF1NPnRk41NQ3B/SOhp2zhF+AiCitWALqgEP+jy2fgIyslBLNSZMtBctKnJKqzGgyiye3no7GJrJ0MTHXdg==",
-      "type": "package",
-      "path": "swashbuckle.aspnetcore/2.4.0",
-      "files": [
-        "lib/net451/Swashbuckle.AspNetCore.dll",
-        "lib/netstandard1.6/Swashbuckle.AspNetCore.dll",
-        "swashbuckle.aspnetcore.2.4.0.nupkg.sha512",
-        "swashbuckle.aspnetcore.nuspec"
-      ]
-    },
-    "Swashbuckle.AspNetCore.Swagger/2.4.0": {
-      "sha512": "gO+t8uBCQUDNjgAK5Mg56C5Pj88Z9WHBacm1njuMeDvbpEvFluNg8ocnDNYnwMcg1EcK8S+u+Xijzzf7PtpeXg==",
-      "type": "package",
-      "path": "swashbuckle.aspnetcore.swagger/2.4.0",
-      "files": [
-        "lib/net451/Swashbuckle.AspNetCore.Swagger.dll",
-        "lib/net451/Swashbuckle.AspNetCore.Swagger.xml",
-        "lib/netstandard1.6/Swashbuckle.AspNetCore.Swagger.dll",
-        "lib/netstandard1.6/Swashbuckle.AspNetCore.Swagger.xml",
-        "swashbuckle.aspnetcore.swagger.2.4.0.nupkg.sha512",
-        "swashbuckle.aspnetcore.swagger.nuspec"
-      ]
-    },
-    "Swashbuckle.AspNetCore.SwaggerGen/2.4.0": {
-      "sha512": "dDaKa1kLGjVNYHnTtv3BT+yg8fVHf3HRgpY4bjhRcjtJJtCHejPFWUF3DoIDB4c5mmlZoAvqn6iOtQW+Qj4wOg==",
-      "type": "package",
-      "path": "swashbuckle.aspnetcore.swaggergen/2.4.0",
-      "files": [
-        "lib/net451/Swashbuckle.AspNetCore.SwaggerGen.dll",
-        "lib/net451/Swashbuckle.AspNetCore.SwaggerGen.xml",
-        "lib/netstandard1.6/Swashbuckle.AspNetCore.SwaggerGen.dll",
-        "lib/netstandard1.6/Swashbuckle.AspNetCore.SwaggerGen.xml",
-        "swashbuckle.aspnetcore.swaggergen.2.4.0.nupkg.sha512",
-        "swashbuckle.aspnetcore.swaggergen.nuspec"
-      ]
-    },
-    "Swashbuckle.AspNetCore.SwaggerUI/2.4.0": {
-      "sha512": "TwnD/Ibviaxvuemq1YssHruRuEQBoJFuWaONClth6ZSae9YcFyy00bWCjvXJvrlbmIDw3UKZwWQ5f+zGFIjaqw==",
-      "type": "package",
-      "path": "swashbuckle.aspnetcore.swaggerui/2.4.0",
-      "files": [
-        "lib/net451/Swashbuckle.AspNetCore.SwaggerUI.dll",
-        "lib/net451/Swashbuckle.AspNetCore.SwaggerUI.xml",
-        "lib/netstandard1.6/Swashbuckle.AspNetCore.SwaggerUI.dll",
-        "lib/netstandard1.6/Swashbuckle.AspNetCore.SwaggerUI.xml",
-        "swashbuckle.aspnetcore.swaggerui.2.4.0.nupkg.sha512",
-        "swashbuckle.aspnetcore.swaggerui.nuspec"
       ]
     },
     "System.AppContext/4.3.0": {
@@ -13342,6 +13342,17 @@
         "system.xml.xpath.xdocument.nuspec"
       ]
     },
+    "T4/2.0.1": {
+      "sha512": "M2ga3EBYkjX9WVvpKLHjwaaV09YpffHy2MSUhKDFUBLcHKGufwVQeCpgF6Af5nCb2U9bnCSUwAs1SndT8zMaJg==",
+      "type": "package",
+      "path": "t4/2.0.1",
+      "files": [
+        "content/CodeTemplates/DbHelper.ttinclude",
+        "content/CodeTemplates/Manager.ttinclude",
+        "t4.2.0.1.nupkg.sha512",
+        "t4.nuspec"
+      ]
+    },
     "WindowsAzure.Storage/8.1.4": {
       "sha512": "W6ZZ0/o7+3Qb77mRAQyLjPudHG3OMeeQ4p9yY13PUdJArmRCx2cLMm5F4tpIjJXxzHC0ew0oK7DMDGILMdfCnw==",
       "type": "package",
@@ -13368,14 +13379,18 @@
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v2.0": [
       "EntityFramework >= 6.2.0",
+      "EntityFramework.SqlServerCompact >= 6.2.0",
+      "Generator >= 1.0.9",
       "Microsoft.AspNet.Identity.EntityFramework >= 2.2.1",
-      "Microsoft.AspNet.WebApi.Core >= 5.2.5",
       "Microsoft.AspNetCore.All >= 2.0.7",
+      "Microsoft.EntityFrameworkCore >= 2.0.2",
       "Microsoft.EntityFrameworkCore.SqlServer >= 2.0.2",
       "Microsoft.EntityFrameworkCore.Tools >= 2.0.2",
       "Microsoft.NETCore.App >= 2.0.0",
+      "Microsoft.VisualStudio.Web.CodeGeneration >= 2.0.3",
       "Microsoft.VisualStudio.Web.CodeGeneration.Design >= 2.0.3",
-      "Swashbuckle.AspNetCore >= 2.4.0"
+      "Poco.Evolved.SQL >= 1.1.0",
+      "T4 >= 2.0.1"
     ]
   },
   "packageFolders": {
@@ -13386,11 +13401,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Eva\\Desktop\\CloneIDV\\IDV-NET5\\TodoAPI_CRUD\\TodoAPI_CRUD.csproj",
-      "projectName": "TodoAPI_CRUD",
-      "projectPath": "C:\\Users\\Eva\\Desktop\\CloneIDV\\IDV-NET5\\TodoAPI_CRUD\\TodoAPI_CRUD.csproj",
+      "projectUniqueName": "C:\\Users\\Eva\\source\\repos\\IDV_NET5\\IDV_NET5\\IDV_NET5.csproj",
+      "projectName": "IDV_NET5",
+      "projectPath": "C:\\Users\\Eva\\source\\repos\\IDV_NET5\\IDV_NET5\\IDV_NET5.csproj",
       "packagesPath": "C:\\Users\\Eva\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Eva\\Desktop\\CloneIDV\\IDV-NET5\\TodoAPI_CRUD\\obj\\",
+      "outputPath": "C:\\Users\\Eva\\source\\repos\\IDV_NET5\\IDV_NET5\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackagesFallback\\",
@@ -13426,17 +13441,25 @@
             "target": "Package",
             "version": "[6.2.0, )"
           },
+          "EntityFramework.SqlServerCompact": {
+            "target": "Package",
+            "version": "[6.2.0, )"
+          },
+          "Generator": {
+            "target": "Package",
+            "version": "[1.0.9, )"
+          },
           "Microsoft.AspNet.Identity.EntityFramework": {
             "target": "Package",
             "version": "[2.2.1, )"
           },
-          "Microsoft.AspNet.WebApi.Core": {
-            "target": "Package",
-            "version": "[5.2.5, )"
-          },
           "Microsoft.AspNetCore.All": {
             "target": "Package",
             "version": "[2.0.7, )"
+          },
+          "Microsoft.EntityFrameworkCore": {
+            "target": "Package",
+            "version": "[2.0.2, )"
           },
           "Microsoft.EntityFrameworkCore.SqlServer": {
             "target": "Package",
@@ -13451,13 +13474,21 @@
             "version": "[2.0.0, )",
             "autoReferenced": true
           },
+          "Microsoft.VisualStudio.Web.CodeGeneration": {
+            "target": "Package",
+            "version": "[2.0.3, )"
+          },
           "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
             "target": "Package",
             "version": "[2.0.3, )"
           },
-          "Swashbuckle.AspNetCore": {
+          "Poco.Evolved.SQL": {
             "target": "Package",
-            "version": "[2.4.0, )"
+            "version": "[1.1.0, )"
+          },
+          "T4": {
+            "target": "Package",
+            "version": "[2.0.1, )"
           }
         },
         "imports": [
@@ -13483,6 +13514,36 @@
       "code": "NU1701",
       "level": "Warning",
       "warningLevel": 1,
+      "message": "Le package 'EntityFramework.SqlServerCompact 6.2.0' a été restauré en utilisant '.NETFramework,Version=v4.6.1' au lieu du framework cible du projet '.NETCoreApp,Version=v2.0'. Ce package n'est peut-être pas totalement compatible avec votre projet.",
+      "libraryId": "EntityFramework.SqlServerCompact",
+      "targetGraphs": [
+        ".NETCoreApp,Version=v2.0"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Le package 'Generator 1.0.9' a été restauré en utilisant '.NETFramework,Version=v4.6.1' au lieu du framework cible du projet '.NETCoreApp,Version=v2.0'. Ce package n'est peut-être pas totalement compatible avec votre projet.",
+      "libraryId": "Generator",
+      "targetGraphs": [
+        ".NETCoreApp,Version=v2.0"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Le package 'HtmlAgilityPack 1.4.6' a été restauré en utilisant '.NETFramework,Version=v4.6.1' au lieu du framework cible du projet '.NETCoreApp,Version=v2.0'. Ce package n'est peut-être pas totalement compatible avec votre projet.",
+      "libraryId": "HtmlAgilityPack",
+      "targetGraphs": [
+        ".NETCoreApp,Version=v2.0"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
       "message": "Le package 'Microsoft.AspNet.Identity.Core 2.2.1' a été restauré en utilisant '.NETFramework,Version=v4.6.1' au lieu du framework cible du projet '.NETCoreApp,Version=v2.0'. Ce package n'est peut-être pas totalement compatible avec votre projet.",
       "libraryId": "Microsoft.AspNet.Identity.Core",
       "targetGraphs": [
@@ -13495,16 +13556,6 @@
       "warningLevel": 1,
       "message": "Le package 'Microsoft.AspNet.Identity.EntityFramework 2.2.1' a été restauré en utilisant '.NETFramework,Version=v4.6.1' au lieu du framework cible du projet '.NETCoreApp,Version=v2.0'. Ce package n'est peut-être pas totalement compatible avec votre projet.",
       "libraryId": "Microsoft.AspNet.Identity.EntityFramework",
-      "targetGraphs": [
-        ".NETCoreApp,Version=v2.0"
-      ]
-    },
-    {
-      "code": "NU1701",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "Le package 'Microsoft.AspNet.WebApi.Core 5.2.5' a été restauré en utilisant '.NETFramework,Version=v4.6.1' au lieu du framework cible du projet '.NETCoreApp,Version=v2.0'. Ce package n'est peut-être pas totalement compatible avec votre projet.",
-      "libraryId": "Microsoft.AspNet.WebApi.Core",
       "targetGraphs": [
         ".NETCoreApp,Version=v2.0"
       ]
